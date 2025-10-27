@@ -6,119 +6,111 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #181818;
+      background: #141414;
       color: #fff;
       font-family: 'Montserrat', Arial, sans-serif;
       margin: 0; padding: 0;
       min-height: 100vh;
     }
     nav {
-      background: rgba(24,24,24,.96);
+      background: #141414;
       position: sticky; top: 0; z-index: 99;
       display: flex; justify-content: center; align-items: center;
-      gap: 2.2rem; font-size: 1.09rem; font-weight: 500;
-      padding: 1.1rem 0; letter-spacing: -.03em;
-      box-shadow: 0 1px 18px #14090912;
+      gap: 2.2rem; font-size: 1.12rem; font-weight: 500;
+      padding: 1.1rem 0; letter-spacing: 2px;
+      box-shadow: 0 2px 12px #000a;
     }
     nav a {
-      color: #ff4b2b; text-decoration: none;
+      color: #e50914; text-decoration: none;
       text-transform: uppercase;
+      font-weight: bold;
       transition: color 0.2s;
-      font-weight: bold; letter-spacing: 2px;
     }
-    nav a:hover { color: #fff475; }
+    nav a:hover { color: #fff; }
     .hero-banner {
-      background: linear-gradient(140deg, #2e2018 40%, #181818 100%);
-      display: flex; align-items: center;
-      gap: 2.4rem; margin: 0 auto; max-width: 1100px;
-      border-radius: 24px; margin-top: 2.6rem;
-      box-shadow: 0 12px 60px #4d24127a;
-      padding: 2.8rem 2.5rem;
+      background: linear-gradient(120deg,#141414 70%,#302f2f 100%);
+      display: flex; align-items: center; gap: 2.4rem;
+      margin: 0 auto; max-width: 1080px; margin-top: 2.7rem;
+      border-radius: 24px; box-shadow: 0 12px 48px #0007;
+      padding: 2.8rem 2.4rem;
     }
     .banner-img {
-      width: 160px; height: 160px; border-radius: 18px;
-      box-shadow: 0 10px 48px #541d0950;
+      width: 165px; height: 165px; border-radius: 18px;
+      box-shadow: 0 10px 44px #e5091480;
       object-fit: cover; margin: 0 2rem 0 0;
-      background: #2e2018;
+      background: #e50914;
     }
     .banner-content {
       flex: 1;
     }
     .banner-title {
-      font-size: 2.1rem; font-weight: 800;
-      color: #fff475; margin-bottom: .7rem;
-      letter-spacing: -2px;
-      text-shadow: 0 2px 12px #201D1380, 0 0 2px #2c120173;
+      font-size: 2.2rem; font-weight: 900; color: #e50914;
+      margin-bottom: .8rem; letter-spacing: -1.3px;
+      text-shadow: 0 2px 8px #000a;
     }
     .banner-desc {
-      font-size: 1.19rem; margin-bottom: 0.7rem;
-      color: #fff; line-height: 1.5;
+      font-size: 1.16rem; margin-bottom: 0.7rem;
+      color: #fff; line-height: 1.6;
       font-weight: 500;
     }
     .banner-tagline {
-      font-size: 1.04rem; color: #ff4b2b;
-      margin-bottom: 1.4rem; font-style: italic;
-      letter-spacing: .2px;
+      font-size: 1.09rem; color: #e50914;
+      margin-bottom: 1.3rem; font-style: italic;
+      letter-spacing: .4px;
     }
     .section-row {
-      max-width: 1100px; margin: 2.8rem auto 0 auto;
+      max-width: 1080px; margin: 2.8rem auto 0 auto;
     }
     .row-title {
-      font-size: 1.21rem; font-weight: 700; color: #fff475;
-      margin-bottom: 1rem; letter-spacing: -1px;
-      text-shadow: 0 1px 4px #22130c55;
+      font-size: 1.14rem; font-weight: 700; color: #e50914;
+      margin-bottom: 1.2rem; letter-spacing: -.7px;
+      text-shadow: 0 1px 4px #0006;
     }
     .card-row {
-      display: flex; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem;
-      scrollbar-width: thin; scrollbar-color: #2e2018 #181818;
+      display: flex; overflow-x: auto; gap: 1.4rem; padding-bottom: 1rem;
+      scrollbar-width: thin; scrollbar-color: #e50914 #141414;
     }
     .card {
-      min-width: 210px; max-width: 240px; background: #27221D;
-      border-radius: 14px; box-shadow: 0 2px 28px #1c110c1b;
-      padding: 1.2rem 1rem; color: #fff;
-      transition: transform 0.25s, box-shadow 0.25s;
-      text-decoration: none;
-      display: flex; flex-direction: column; align-items: flex-start;
-      margin-right: 0.2rem;
-      border: 2px solid #3b332a33;
-      position: relative;
+      min-width: 210px; max-width: 234px; background: #181818;
+      border-radius: 16px; box-shadow: 0 2px 28px #1117;
+      padding: 1.1rem 1rem; color: #fff; transition: transform 0.22s, box-shadow 0.22s;
+      text-decoration: none; display: flex; flex-direction: column;
+      align-items: flex-start; margin-right: 0.2rem; position: relative;
+      border: 2px solid #232323;
     }
     .card::after {
       content: '';
-      position: absolute; left: 0; top: 0; width: 100%; height: 95%;
-      border-radius: 14px;
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+      border-radius: 16px;
       pointer-events: none;
-      background: linear-gradient(to bottom, transparent 55%, #181818bb 100%);
+      background: linear-gradient(to bottom, transparent 60%, #141414b5 100%);
     }
     .card:hover {
-      transform: scale(1.07) translateY(-10px);
-      box-shadow: 0 10px 32px #3717077c;
-      border-color: #ff4b2b80;
+      transform: scale(1.04) translateY(-8px);
+      box-shadow: 0 10px 32px #e509147c;
+      border-color: #e50914;
       z-index: 2;
     }
     .card-title {
-      font-size: 1.08rem; font-weight: 600; color: #fff475;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 1px 2px #22130c;
+      font-size: 1.08rem; font-weight: 600; color: #e50914;
+      margin-bottom: 0.5rem; text-shadow: 0 1px 2px #000;
     }
     .card-desc {
-      font-size: .99rem; color: #fff;
-      opacity: .96; margin-bottom: .47rem;
+      font-size: .99rem; color: #fff; opacity: .96; margin-bottom: .47rem;
     }
     .card-link {
-      margin-top: .5rem; color: #ff4b2b;
-      text-decoration: none; font-weight: 600;
-      font-size: .96rem; letter-spacing: 1px;
+      margin-top: .5rem; color: #e50914;
+      text-decoration: none; font-weight: 600; font-size: .97rem;
       display: inline-block;
     }
-    .card-link:hover { color: #fff475; }
+    .card-link:hover { color: #fff; }
     footer {
-      text-align: center; color: #fff475bb;
-      margin: 3rem 0 1.1rem 0; font-size: 1.11rem; font-style: italic;
+      text-align: center; color: #e50914bb;
+      margin: 3rem 0 1rem 0; font-size: 1.13rem; font-style: italic;
     }
-    @media (max-width: 750px) {
-      .hero-banner { flex-direction: column; padding: 1.35rem; gap: 1rem; }
-      .banner-img { width: 130px; height: 130px; margin: 0 0 1.2rem 0; }
+    @media (max-width: 800px) {
+      .hero-banner { flex-direction: column; padding: 1.2rem; gap: 1rem; }
+      .banner-img { width: 125px; height: 125px; margin: 0 0 1.2rem 0; }
     }
   </style>
 </head>
@@ -139,7 +131,7 @@
     <div class="banner-title">Be the change you wish to see in the world.</div>
     <div class="banner-desc">
       I’m Seevaranjinee — engineer, creator, cinephile, and an innovator in the making. I live at the crossroads of technology and storytelling, where imagination becomes design and purpose meets progress.<br>
-      I believe in the art of the unfinished — ideas that adapt and transform the world.<br>
+      I believe in the art of the unfinished — ideas that adapt and transform the world.
     </div>
     <div class="banner-tagline">
       Join me to build a future that’s sustainable, tech-driven, and endlessly curious—one inspired idea at a time.
@@ -210,4 +202,3 @@
 </footer>
 </body>
 </html>
-
