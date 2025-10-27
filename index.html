@@ -2,43 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Seevaranjinee Sandhirasegarane | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:700,400&display=swap" rel="stylesheet">
+  <title>Seevaranjinee | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
-      background: url('pastel_novel_bg.png') center/cover fixed, linear-gradient(120deg, #f2ede2 80%, #e7ecd5 100%);
-      font-family: 'Inter', Arial, sans-serif;
-      color: #343235;
+      background: #181818;
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0;
       min-height: 100vh;
-      margin: 0;
-      padding: 0;
     }
-    nav { /* unchanged from previous version */ }
-    .hero {
-      display: flex; align-items: center; gap: 2.4rem;
-      margin: 2.5rem auto 2.3rem auto; max-width: 800px;
-      background: rgba(255,255,245,0.92);
-      border-radius: 28px;
-      padding: 2.7rem 2.3rem;
-      box-shadow: 0 10px 32px rgba(110,80,50,.09);
+    nav {
+      background: rgba(24,24,24,.96);
+      position: sticky; top: 0; z-index: 99;
+      display: flex; justify-content: center; align-items: center;
+      gap: 2.2rem; font-size: 1.09rem; font-weight: 500;
+      padding: 1.1rem 0; letter-spacing: -.03em;
+      box-shadow: 0 1px 18px #14090912;
     }
-    .profile-img { /* unchanged from previous version */ }
-    .intro-content { flex: 1; }
-    .ott-title {
-      font-size: 2.1rem; font-weight: 700; color: #816b58; margin-bottom: .7rem;
-      letter-spacing: -2px; font-family: 'Inter', Arial, sans-serif;
+    nav a {
+      color: #ff4b2b; text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      font-weight: bold; letter-spacing: 2px;
     }
-    .subtitle {
-      font-size: 1.15rem; color: #568855; margin-bottom: 1.4rem; font-weight: bold;
+    nav a:hover { color: #fff475; }
+    .hero-banner {
+      background: linear-gradient(140deg, #2e2018 40%, #181818 100%);
+      display: flex; align-items: center;
+      gap: 2.4rem; margin: 0 auto; max-width: 1100px;
+      border-radius: 24px; margin-top: 2.6rem;
+      box-shadow: 0 12px 60px #4d24127a;
+      padding: 2.8rem 2.5rem;
     }
-    .about {
-      font-size: 1.01rem; line-height: 1.7; color: #51493e; margin-bottom: 1.1rem;
+    .banner-img {
+      width: 160px; height: 160px; border-radius: 18px;
+      box-shadow: 0 10px 48px #541d0950;
+      object-fit: cover; margin: 0 2rem 0 0;
+      background: #2e2018;
     }
-    .contact {
-      margin-top: 1.05rem; font-size: 1.04rem; color: #0a84ff; opacity: .8;
+    .banner-content {
+      flex: 1;
+    }
+    .banner-title {
+      font-size: 2.1rem; font-weight: 800;
+      color: #fff475; margin-bottom: .7rem;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 12px #201D1380, 0 0 2px #2c120173;
+    }
+    .banner-desc {
+      font-size: 1.19rem; margin-bottom: 0.7rem;
+      color: #fff; line-height: 1.5;
       font-weight: 500;
     }
-    .section-row, .card-row, .card, .footer { /* unchanged from previous version */ }
+    .banner-tagline {
+      font-size: 1.04rem; color: #ff4b2b;
+      margin-bottom: 1.4rem; font-style: italic;
+      letter-spacing: .2px;
+    }
+    .section-row {
+      max-width: 1100px; margin: 2.8rem auto 0 auto;
+    }
+    .row-title {
+      font-size: 1.21rem; font-weight: 700; color: #fff475;
+      margin-bottom: 1rem; letter-spacing: -1px;
+      text-shadow: 0 1px 4px #22130c55;
+    }
+    .card-row {
+      display: flex; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem;
+      scrollbar-width: thin; scrollbar-color: #2e2018 #181818;
+    }
+    .card {
+      min-width: 210px; max-width: 240px; background: #27221D;
+      border-radius: 14px; box-shadow: 0 2px 28px #1c110c1b;
+      padding: 1.2rem 1rem; color: #fff;
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+      display: flex; flex-direction: column; align-items: flex-start;
+      margin-right: 0.2rem;
+      border: 2px solid #3b332a33;
+      position: relative;
+    }
+    .card::after {
+      content: '';
+      position: absolute; left: 0; top: 0; width: 100%; height: 95%;
+      border-radius: 14px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent 55%, #181818bb 100%);
+    }
+    .card:hover {
+      transform: scale(1.07) translateY(-10px);
+      box-shadow: 0 10px 32px #3717077c;
+      border-color: #ff4b2b80;
+      z-index: 2;
+    }
+    .card-title {
+      font-size: 1.08rem; font-weight: 600; color: #fff475;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 1px 2px #22130c;
+    }
+    .card-desc {
+      font-size: .99rem; color: #fff;
+      opacity: .96; margin-bottom: .47rem;
+    }
+    .card-link {
+      margin-top: .5rem; color: #ff4b2b;
+      text-decoration: none; font-weight: 600;
+      font-size: .96rem; letter-spacing: 1px;
+      display: inline-block;
+    }
+    .card-link:hover { color: #fff475; }
+    footer {
+      text-align: center; color: #fff475bb;
+      margin: 3rem 0 1.1rem 0; font-size: 1.11rem; font-style: italic;
+    }
+    @media (max-width: 750px) {
+      .hero-banner { flex-direction: column; padding: 1.35rem; gap: 1rem; }
+      .banner-img { width: 130px; height: 130px; margin: 0 0 1.2rem 0; }
+    }
   </style>
 </head>
 <body>
@@ -51,38 +132,82 @@
   <a href="certifications.html">Certifications</a>
   <a href="blog.html">Blog</a>
 </nav>
-<section class="hero">
-  <img src="image.jpg" alt="Seevaranjinee's Portrait" class="profile-img" />
-  <div class="intro-content">
-    <div class="ott-title">“Be the change you wish to see in the world.” </div>
-    <div class="subtitle">
-      I’m Seevaranjinee — engineer, creator, cinephile, and an innovator in the making.<br>
-      I live at the crossroads of technology and storytelling, where imagination becomes design and purpose meets progress.<br>
-      I believe in the art of the unfinished — the kind of ideas that grow, adapt, and transform the world around us.<br>
-      Join me on a journey to build a future that’s sustainable, tech-driven, and endlessly curious — one inspired idea at a time.
+
+<section class="hero-banner">
+  <img src="image.jpg" alt="Seevaranjinee's Banner" class="banner-img"/>
+  <div class="banner-content">
+    <div class="banner-title">Be the change you wish to see in the world.</div>
+    <div class="banner-desc">
+      I’m Seevaranjinee — engineer, creator, cinephile, and an innovator in the making. I live at the crossroads of technology and storytelling, where imagination becomes design and purpose meets progress.<br>
+      I believe in the art of the unfinished — ideas that adapt and transform the world.<br>
     </div>
-    <div class="about">
-      <span style="font-size:1.15rem;">💫 About Me</span><br>
-      A cinephile who finds meaning in frames, a strategist who plans storms, and a creator who thrives in uncertainty.<br>
-      My philosophy? Perfection closes the door — curiosity keeps it open.<br>
-      Films shape my empathy, cooking balances my chaos,<br>
-      and engineering empowers me to turn thought into impact.<br>
-      I see technology not as a tool, but as a language — one that speaks innovation, sustainability, and human connection.
-    </div>
-    <div class="contact">
-      📧 Contact: <a href="mailto:seevaranjinee.s@gmail.com">seevaranjinee.s@gmail.com</a>
-    </div>
-    <div class="about" style="margin-top:1.2rem;">
-      This portfolio is not a finished chapter — it’s a growing narrative of curiosity, design, and leadership,<br>
-      always reaching for the next frame in the reel.
+    <div class="banner-tagline">
+      Join me to build a future that’s sustainable, tech-driven, and endlessly curious—one inspired idea at a time.
     </div>
   </div>
 </section>
 
-<!-- Feature section rows as in previous example can go here -->
+<section class="section-row">
+  <div class="row-title">Work Experience</div>
+  <div class="card-row">
+    <a href="work.html" class="card">
+      <div class="card-title">Embedded Systems & IoT Intern</div>
+      <div class="card-desc">Industry automation, real-time data, hardware design.</div>
+      <span class="card-link">More</span>
+    </a>
+    <a href="work.html" class="card">
+      <div class="card-title">Networking Intern</div>
+      <div class="card-desc">Cisco IoT, protocol troubleshooting, tech solutions.</div>
+      <span class="card-link">More</span>
+    </a>
+    <a href="work.html" class="card">
+      <div class="card-title">In-Plant Trainee</div>
+      <div class="card-desc">Defense electronics, quality assurance, workflow.</div>
+      <span class="card-link">More</span>
+    </a>
+  </div>
+</section>
+
+<section class="section-row">
+  <div class="row-title">Projects</div>
+  <div class="card-row">
+    <a href="projects.html" class="card">
+      <div class="card-title">Image Filtering with Vedic Multipliers</div>
+      <div class="card-desc">Math meets art—speed and clarity algorithm design.</div>
+      <span class="card-link">View</span>
+    </a>
+    <a href="projects.html" class="card">
+      <div class="card-title">FPGA AES-GCM Encryption</div>
+      <div class="card-desc">Security in motion: high-speed FPGA encryption.</div>
+      <span class="card-link">View</span>
+    </a>
+    <a href="projects.html" class="card">
+      <div class="card-title">AI Water Regulation System</div>
+      <div class="card-desc">Tech for empathy: Hackathon innovations ripple out.</div>
+      <span class="card-link">View</span>
+    </a>
+  </div>
+</section>
+
+<section class="section-row">
+  <div class="row-title">Education</div>
+  <div class="card-row">
+    <a href="education.html" class="card">
+      <div class="card-title">B.Tech, Electronics & Comm.</div>
+      <div class="card-desc">Smart encryption, innovation, hackathons, research.</div>
+      <span class="card-link">Details</span>
+    </a>
+    <a href="education.html" class="card">
+      <div class="card-title">Primrose School</div>
+      <div class="card-desc">Mathematics Olympiad, profound curiosity.</div>
+      <span class="card-link">Details</span>
+    </a>
+  </div>
+</section>
 
 <footer>
   This portfolio is a draft—ever evolving, always reaching for the next page or scene.
 </footer>
 </body>
 </html>
+
