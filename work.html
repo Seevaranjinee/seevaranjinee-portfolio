@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Work Experience | Seevaranjinee Sandhirasegarane</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Work Experience | Seevaranjinee</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body { background: #141414; color: #fff; font-family: 'Montserrat', Arial, sans-serif; margin: 0; padding: 0; min-height: 100vh;}
+    nav { background: #141414; position: sticky; top: 0; z-index: 99; display: flex; justify-content: center; gap: 2.1rem; font-weight: 500; font-size: 1.08rem; padding: 1.1rem 0; }
+    nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
+    nav a:hover { color: #fff; }
+    .container { max-width: 800px; margin: 2.8rem auto 0 auto; }
+    .section-h1 { color: #fff475; font-size: 2.1rem; text-shadow: 0 2px 8px #000a; font-weight: 800; letter-spacing: -1.6px; margin-bottom: 2.1rem;}
+    .job {
+      background: #181818; border-radius: 16px; margin-bottom: 2rem; box-shadow: 0 2px 28px #1117;
+      padding: 2rem 1.5rem 1rem 1.5rem; position: relative;
+    }
+    .job-title { font-size: 1.2rem; color: #e50914; font-weight: 700; margin-bottom: 0.3rem;}
+    .job-meta { font-size: 1.02rem; color: #ccc; margin-bottom: .8rem;}
+    .job-desc { font-size: 1.1rem; color: #fff; margin-bottom: .8rem; line-height: 1.7;}
+    .quote { font-style: italic; color: #fff475; padding-left: 1rem; border-left: 4px solid #e50914; margin-bottom: .8rem;}
+    .exp-summary { margin-top: 2.5rem; font-size: 1.14rem; color: #fff; }
+    .cert-btn { display: block; background: #e50914; color: #fff; padding: 0.7rem 1.6rem; border: none; border-radius: 10px; font-size: 1.04rem; font-weight: bold; margin: 2.7rem auto 0 auto; cursor: pointer; transition: background 0.2s; text-align: center;}
+    .cert-btn:hover { background: #fff475; color: #e50914;}
+    .cert-popup { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(20,20,20,0.98); z-index: 1001; align-items: center; justify-content: center; }
+    .cert-inner { background: #222; padding: 2.4rem 1.4rem; border-radius: 17px; color: #fff; max-width: 420px; box-shadow: 0 8px 32px #0007; text-align: center;}
+    .close-btn { background: #e50914; border: none; color: #fff; font-size: 1.05rem; padding: .5rem 1.5rem; border-radius: 7px; cursor: pointer; margin-top: 1.6rem;}
+    .pw-input { padding:8px 12px; border-radius:6px; border:1px solid #888; margin-bottom:10px; }
+  </style>
 </head>
 <body>
 <nav>
@@ -15,36 +38,83 @@
   <a href="certifications.html">Certifications</a>
   <a href="blog.html">Blog</a>
 </nav>
-<main>
-  <h1>Work Experience</h1>
-  <p>
-    Every workday is a narrative—technical scripts and human stories. Here are the chapters I’ve lived:
-  </p>
-  <section>
-    <h2>Embedded Systems & IoT Intern</h2>
-    <h3>Ministry of Micro, Small and Medium Enterprises, Puducherry (Jan–Mar 2025)</h3>
-    <p>
-      Where microcontrollers became the heart of automation and data sang in real time; I crafted hardware, solved industrial riddles, and learned from each elegant failure.
-    </p>
-    <a href="blog.html">Read my experience blog →</a>
-  </section>
-  <section>
-    <h2>Networking Intern</h2>
-    <h3>G-MAC Technologies Pvt Ltd, Chennai (Dec 2023–Jan 2024)</h3>
-    <p>
-      Journeyed through networks and protocols, troubleshooting the dance of IoT devices, making connections that stretched between imagination and industry.
-    </p>
-  </section>
-  <section>
-    <h2>In-Plant Trainee</h2>
-    <h3>Bharat Electronics Limited, Chennai (May 2024)</h3>
-    <p>
-      Where discipline and quality assurance were forged in the fires of defense technology. Every detail matters when what you build could shape safety.
-    </p>
-  </section>
-</main>
+<div class="container">
+  <div class="section-h1">Work Experience</div>
+  
+  <div class="job">
+    <div class="job-title">🌐 Embedded Systems & IoT Intern</div>
+    <div class="job-meta">Ministry of Micro, Small and Medium Enterprises (MSME), Puducherry | Jan – Mar 2025</div>
+    <div class="job-desc">
+      In this government-supported innovation program, I immersed myself in the world where microcontrollers pulse life into automation. I designed and tested embedded hardware integrating UART, SPI, and I²C protocols, bridging sensors, actuators, and intelligence into one seamless system.<br>
+      Through real-time data acquisition and signal processing, I explored the rhythm between hardware precision and system adaptability, translating code into control and data into design. Collaborating with industry professionals, I learned that innovation thrives not in perfection but in iteration—each failure refining a smarter solution.
+    </div>
+    <div class="quote">“Where microcontrollers learned to speak the language of possibility.”</div>
+    <a class="card-link" href="blog.html">[Read my experience blog →]</a>
+  </div>
+  
+  <div class="job">
+    <div class="job-title">⚙️ In-Plant Trainee</div>
+    <div class="job-meta">Bharat Electronics Limited (BEL), Chennai | May 2024</div>
+    <div class="job-desc">
+      At India’s leading defense electronics company, I stepped into the world of quality assurance and reliability engineering, where precision defines safety. My short but impactful tenure in the Development & Product Assurance divisions taught me the discipline behind defense technology — from failure analysis to rigorous testing cycles.<br>
+      Observing senior engineers navigate constraints of performance, ethics, and innovation inspired me to see engineering as a form of national craftsmanship — a blend of science, duty, and design integrity.
+    </div>
+    <div class="quote">“Every component carried responsibility; every detail was a promise.”</div>
+  </div>
+
+  <div class="job">
+    <div class="job-title">🔌 Networking Intern</div>
+    <div class="job-meta">G-MAC Technologies Pvt. Ltd., Chennai | Dec 2023 – Jan 2024</div>
+    <div class="job-desc">
+      At G-MAC, I ventured into the backbone of communication — networks that connect imagination to infrastructure. I configured and managed Cisco routers, switches, and IoT devices, troubleshooting issues in real-world enterprise environments.<br>
+      Beyond commands and cables, I understood how networks mirror collaboration itself — resilience built through connection. The internship strengthened my foundation in scalability, latency management, and secure data transmission, key pillars of modern IoT systems.
+    </div>
+    <div class="quote">“In every packet transferred, I saw a conversation between machines—and makers.”</div>
+  </div>
+
+  <div class="exp-summary">
+    Each experience forms a chapter in my evolving journey as an engineer and innovator, shaping me into someone who not only builds systems but also envisions the stories they’ll tell tomorrow.
+  </div>
+
+  <!-- Certificate button for your access -->
+  <button class="cert-btn" onclick="document.getElementById('cert-popup').style.display='flex'">View My Certificates (Private)</button>
+
+  <div class="cert-popup" id="cert-popup">
+    <div class="cert-inner">
+      <div id="cert-login">
+        <p>Enter access code:</p>
+        <input type="password" class="pw-input" id="certcode">
+        <button class="close-btn" onclick="checkCert()">View Certificates</button>
+      </div>
+      <div id="cert-contents" style="display:none;">
+        <h3>Private Certificates</h3>
+        <ul style="text-align:left;">
+          <li>Embedded Systems Specialization, MSME</li>
+          <li>BEL Defense QA Training (with merit)</li>
+          <li>Cisco Networking Workshop, G-MAC</li>
+          <li>And more...</li>
+        </ul>
+        <button class="close-btn" onclick="document.getElementById('cert-popup').style.display='none'">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <footer>
-  <p>Each work experience is a scene in my cinematic professional journey.</p>
+  <br>This portfolio is a draft—always moving, like a story with new episodes to come.
 </footer>
+<script>
+function checkCert() {
+  const pw = document.getElementById('certcode').value;
+  if(pw === "2003") { // Replace with a code only you know!
+    document.getElementById('cert-login').style.display = "none";
+    document.getElementById('cert-contents').style.display = "block";
+  } else {
+    alert('Access denied. (Tip: Only you should know this code!)');
+  }
+}
+document.getElementById('cert-popup').onclick = function(event) {
+  if(event.target === this) this.style.display='none';
+}
+</script>
 </body>
 </html>
