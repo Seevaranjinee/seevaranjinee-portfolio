@@ -242,3 +242,11 @@ blockquote {
   0%,80% { opacity: 1; }
   100%   { opacity: 0; visibility: hidden; }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const credits = document.getElementById('credit');
+
+
+    setTimeout(() => {
+        credits.classList.add('show');
+    }, 3500);
+});
