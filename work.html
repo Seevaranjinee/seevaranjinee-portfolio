@@ -4,9 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work Experience | Seevaranjinee</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 3rem 4rem 6rem;
+    }
+    .work-card {
+      position: relative;
+      background: #181818;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6), 0 0 0 0 #e5091400;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .work-card:nth-child(2){animation-delay:0.2s;}
+    .work-card:nth-child(3){animation-delay:0.4s;}
+    .work-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 35px rgba(229,9,20,0.45),
+                  0 0 16px 4px #e50914cc,
+                  0 0 30px 10px #e5091411;
+    }
+    .card-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .work-card h2 {
+      font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+      font-size: 1.9rem;
+      color: #e50914;
+      letter-spacing: 0.02em;
+    }
+    .work-card h3 {
+      color: #ccc;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 0;
+    }
+    .work-card p {
+      color: #e0e0e0;
+      line-height: 1.6;
+      font-size: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px){
+      .work-grid { grid-template-columns: 1fr; gap: 1.3rem; padding: 2rem 1.1rem 4rem;}
+      .work-card { padding: 1.2rem;}
+    }
+  </style>
 </head>
 <body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="education.html">Education</a>
+  <a href="projects.html">Projects</a>
+  <a href="skills.html">Skills</a>
+  <a href="certifications.html">Certifications</a>
+  <a href="blog.html">Blog</a>
+</nav>
 
 <header class="page-header">
   <h1 class="h-display">Work Experience</h1>
@@ -19,8 +90,11 @@
     <div class="card-content">
       <h2>Embedded Systems & IoT Intern</h2>
       <h3>Ministry of Micro, Small and Medium Enterprises, Puducherry | Jan – Mar 2025</h3>
-      <p>Where microcontrollers became the heart of automation and data sang in real time. Designed and tested embedded hardware using UART, SPI, and I²C protocols, creating seamless bridges between sensors, actuators, and intelligence. Learned that innovation grows through iteration — every failure, a finer version of success.</p>
-      <a href="#" class="btn">Read My Story →</a>
+      <p>
+        Where microcontrollers became the heart of automation and data sang in real time.
+        Designed and tested embedded hardware using UART, SPI, and I²C protocols, creating seamless bridges between sensors, actuators, and intelligence.
+        Learned that innovation grows through iteration — every failure, a finer version of success.
+      </p>
     </div>
   </div>
 
@@ -28,8 +102,11 @@
     <div class="card-content">
       <h2>In-Plant Trainee</h2>
       <h3>Bharat Electronics Limited, Chennai | May 2024</h3>
-      <p>At India’s premier defense electronics firm, I learned precision under pressure. Worked in Development & Product Assurance, where each test and tolerance measured trust. Every component carried responsibility; every detail, a promise of safety.</p>
-      <a href="#" class="btn">Read My Story →</a>
+      <p>
+        At India’s premier defense electronics firm, I learned precision under pressure.
+        Worked in Development & Product Assurance, where each test and tolerance measured trust.
+        Every component carried responsibility; every detail, a promise of safety.
+      </p>
     </div>
   </div>
 
@@ -37,8 +114,10 @@
     <div class="card-content">
       <h2>Networking Intern</h2>
       <h3>G-MAC Technologies Pvt. Ltd., Chennai | Dec 2023 – Jan 2024</h3>
-      <p>Dived into the backbone of communication — configuring Cisco routers, switches, and IoT devices. Troubleshot real-world network topologies and realized how connectivity is both a technical and human art — resilience built through connection.</p>
-      <a href="#" class="btn">Read My Story →</a>
+      <p>
+        Dived into the backbone of communication — configuring Cisco routers, switches, and IoT devices.
+        Troubleshot real-world network topologies and realized how connectivity is both a technical and human art — resilience built through connection.
+      </p>
     </div>
   </div>
 
@@ -47,6 +126,5 @@
 <footer class="footer">
   © 2025 Seevaranjinee Sandhirasegarane | Crafted in Code & Story
 </footer>
-
 </body>
 </html>
