@@ -2,16 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Certifications | Seevaranjinee</title>
+  <title>Certifications | Seevaranjinee Sandhirasegarane</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    .cert-card { background: #181818; border-radius: 18px; box-shadow: 0 2px 28px #000a, 0 0 16px 4px #e5091433; padding: 2.4rem 2rem 1.7rem 2rem; max-width: 700px; margin: 2rem auto 0 auto;}
-    .cert-title { color: #e50914; font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif; font-size: 1.7rem; margin-bottom: 1.1rem;}
-    .cert-list { list-style: none; padding: 0; }
-    .cert-list li { margin: 0.6rem 0; font-size: 1.09rem; color: #e0e0e0; }
-    .cert-list li:before { content: '🏅 '; color: #e50914; }
+    body {
+      background: #141414;
+      color: #fff;
+      font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0; min-height: 100vh;
+    }
+    nav {
+      background: #141414; position: sticky; top: 0; z-index: 99;
+      display: flex; justify-content: center; gap: 2.1rem;
+      font-weight: 500; font-size: 1.08rem; padding: 1.1rem 0;
+    }
+    nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
+    nav a:hover { color: #fff; }
+    .page-header {
+      padding: 2rem 0 1.2rem 0;
+      text-align: center;
+      background: #141414;
+    }
+    .h-display {
+      font-size: 2.3rem;
+      color: #e50914;
+      font-weight: bold;
+      letter-spacing: -1.5px;
+      margin-bottom: 0.6rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .certifications-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2.4rem auto 0 auto;
+      padding: 0 1.4rem;
+    }
+    .cert-card {
+      background: #181818;
+      border-radius: 18px;
+      box-shadow: 0 2px 28px #000a, 0 0 0 0 #e5091400;
+      padding: 2.2rem 2rem 1.7rem 2rem;
+      display: flex; flex-direction: column; align-items: flex-start;
+      transition: box-shadow 0.35s cubic-bezier(.24, .8, .24, 1), transform 0.4s cubic-bezier(.23, 1, .32, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .cert-card:nth-child(2){animation-delay:0.15s;}
+    .cert-card:nth-child(3){animation-delay:0.28s;}
+    .cert-card:nth-child(4){animation-delay:0.38s;}
+    .cert-card:hover {
+      box-shadow:
+        0 2px 28px #000a,
+        0 0 16px 4px #e50914cc,
+        0 0 30px 10px #e5091411;
+      transform: translateY(-10px) scale(1.03);
+    }
+    .cert-title {
+      color: #e50914;
+      font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif;
+      font-size: 1.24rem;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.55rem;
+      font-weight: 600;
+    }
+    .cert-desc {
+      color: #e0e0e0;
+      line-height: 1.5;
+      font-size: 1.06rem;
+      margin-bottom: 0.5rem;
+    }
+    .certifications-summary {
+      margin: 2.2rem 0 1.4rem 0;
+      font-size: 1.13rem;
+      color: #e50914;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      color: #e50914;
+      background: #141414;
+      font-size: 1.09rem;
+      font-weight: 600;
+      padding: 2.2rem 0 2.2rem 0;
+      margin-top: 2.7rem;
+      letter-spacing: 1px;
+      border-top: 1px solid #222;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px){
+      .certifications-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+      .cert-card { padding: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -26,23 +114,46 @@
 </nav>
 <header class="page-header">
   <h1 class="h-display">Certifications & Achievements</h1>
+  <p style="color:#ccc;">Each certification was a spark expanding my sense of innovation.</p>
 </header>
-<main>
+<section class="certifications-grid">
   <div class="cert-card">
-    <ul class="cert-list">
-      <li>IIT Madras: Ethical AI; Cybersecurity Exercises & Drills</li>
-      <li>IIT Roorkee: Business Models, Innovation & Entrepreneurship</li>
-      <li>IIT Kharagpur: Emotional Intelligence in Professional Environments</li>
-      <li>IIT Kanpur: Wildlife Ecology — bridging science and sustainability</li>
-      <li>NextGen Indian Leaders Program: Leadership for Future Innovators</li>
-      <li>Prompt Engineering for ChatGPT: Exploring AI-human collaboration</li>
-      <li>Smart India Hackathon 2023: Team Innovator (AI for Agriculture)</li>
-      <li>IEEE Student Office Bearer: Finance and workshops, AEROIN Rocketry, Build Your Own Drone</li>
-    </ul>
-    <div style="margin-top:1.1rem; color:#e50914; font-weight:600;">Each certification was a spark expanding my sense of innovation.</div>
+    <div class="cert-title">IIT Madras</div>
+    <div class="cert-desc">Ethical AI; Conducting Cybersecurity Exercises & Drills</div>
   </div>
-</main>
-<footer class="footer">
+  <div class="cert-card">
+    <div class="cert-title">IIT Roorkee</div>
+    <div class="cert-desc">Innovation, Business Models & Entrepreneurship</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">IIT Kharagpur</div>
+    <div class="cert-desc">Emotional Intelligence in Professional Environments</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">IIT Kanpur</div>
+    <div class="cert-desc">Wildlife Ecology — bridging science and sustainability</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">NextGen Indian Leaders Program</div>
+    <div class="cert-desc">Leadership for Future Innovators</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">Prompt Engineering for ChatGPT</div>
+    <div class="cert-desc">Exploring AI-human collaboration</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">Smart India Hackathon 2023</div>
+    <div class="cert-desc">Team Innovator (AI for Agriculture)</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">IEEE Student Office Bearer</div>
+    <div class="cert-desc">Led finance and workshop initiatives incl. AEROIN Rocketry and Build Your Own Drone</div>
+  </div>
+</section>
+<div class="certifications-summary">
+  Certified to Create, Lead, Innovate
+</div>
+<footer>
   © 2025 Seevaranjinee Sandhirasegarane | Certified to Create, Lead, Innovate
 </footer>
 </body>
