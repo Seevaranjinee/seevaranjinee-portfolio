@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Seevaranjinee | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* --- Tudum "S" intro --- */
+    body, html {margin:0; padding:0;}
+    #intro-container {position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity 0.8s cubic-bezier(.5,.9,.35,1);}
+    .s-hero {width: 320px; height: 150px; display: block;}
+    @media (max-width: 500px) { .s-hero { width: 95vw; height: 40vw; } }
+    .fade-out { opacity:0 !important; pointer-events:none; }
+
+    /* --- Main site styles (existing) --- */
     body {
-      background: #141414;
-      color: #fff;
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0; padding: 0;
-      min-height: 100vh;
-    }
+      background: #141414; color: #fff;
+      font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0; min-height: 100vh; transition:background 1.2s;}
     nav {
-      background: #141414;
-      position: sticky; top: 0; z-index: 99;
+      background: #141414; position: sticky; top: 0; z-index: 99;
       display: flex; justify-content: center; align-items: center;
       gap: 2.2rem; font-size: 1.12rem; font-weight: 500;
-      padding: 1.1rem 0; letter-spacing: 2px;
-      box-shadow: 0 2px 12px #000a;
+      padding: 1.1rem 0; letter-spacing: 2px; box-shadow: 0 2px 12px #000a;
     }
     nav a {
       color: #e50914; text-decoration: none;
@@ -40,9 +45,7 @@
       object-fit: cover; margin: 0 2rem 0 0;
       background: #e50914;
     }
-    .banner-content {
-      flex: 1;
-    }
+    .banner-content { flex: 1; }
     .banner-title {
       font-size: 2.2rem; font-weight: 900; color: #e50914;
       margin-bottom: .8rem; letter-spacing: -1.3px;
@@ -81,8 +84,7 @@
     .card::after {
       content: '';
       position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-      border-radius: 16px;
-      pointer-events: none;
+      border-radius: 16px; pointer-events: none;
       background: linear-gradient(to bottom, transparent 60%, #141414b5 100%);
     }
     .card:hover {
@@ -115,6 +117,37 @@
   </style>
 </head>
 <body>
+<div id="intro-container">
+  <!-- SVG S with draw and sweep -->
+  <svg viewBox="0 0 600 200" class="s-hero">
+    <defs>
+      <linearGradient id="s-grad" x1="0" x2="1">
+        <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+        <stop offset="37%" stop-color="#fff" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <mask id="s-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="black"/>
+        <rect class="s-sweep" x="-180" y="0" width="300" height="100%" fill="url(#s-grad)"/>
+      </mask>
+    </defs>
+    <!-- Main bold S path -->
+    <path id="spath"
+      d="M 75 150 Q 130 190 250 150 Q 390 80 320 45 Q 255 10 150 60 Q 70 98 180 120 Q 290 143 390 100"
+      stroke="#e50914" stroke-width="22" fill="none" stroke-linecap="round" stroke-linejoin="round"
+      style="filter:drop-shadow(0 5px 24px #e509143f);stroke-dasharray:800;stroke-dashoffset:800;"/>
+    <!-- Sweep highlight -->
+    <path
+      d="M 75 150 Q 130 190 250 150 Q 390 80 320 45 Q 255 10 150 60 Q 70 98 180 120 Q 290 143 390 100"
+      stroke="#fff" stroke-width="10" fill="none"
+      stroke-linecap="round" stroke-linejoin="round"
+      mask="url(#s-mask)" opacity="0.92"/>
+  </svg>
+  <audio id="tudum-audio" src="tudum.mp3"></audio>
+</div>
+
+<div id="main-content" style="opacity:0;pointer-events:none;transition:opacity 0.8s;">
+
 <nav>
   <a href="index.html">Home</a>
   <a href="work.html">Work</a>
@@ -200,5 +233,38 @@
 <footer>
   This portfolio is a draft—ever evolving, always reaching for the next page or scene.
 </footer>
+</div>
+<script>
+function playTudum() {
+  let audio = document.getElementById('tudum-audio');
+  audio.currentTime = 0;
+  audio.play().catch(()=>{});
+}
+function startSIntro() {
+  // Animate S path
+  const path = document.getElementById('spath');
+  path.style.strokeDashoffset = 800;
+  path.style.transition = "stroke-dashoffset 1.2s cubic-bezier(.5,1,.5,1.16)";
+  setTimeout(()=>{ path.style.strokeDashoffset = 0; },150);
+  // Animate sweep
+  const sweep = document.querySelector('.s-sweep');
+  sweep.style.transition = "transform 1.1s cubic-bezier(.65,.1,.9,.89) 0.8s";
+  sweep.style.transform = "translateX(480px)";
+}
+window.addEventListener("DOMContentLoaded",function(){
+  playTudum();
+  setTimeout(startSIntro, 100);
+  setTimeout(()=>{
+    document.getElementById('intro-container').classList.add('fade-out');
+    document.getElementById('main-content').style.opacity = "1";
+    document.getElementById('main-content').style.pointerEvents = "all";
+    setTimeout(()=>{document.getElementById('intro-container').style.display="none"},900);
+  }, 2200);
+  // For iOS autoplay restrictions, trigger on first tap/click
+  document.body.addEventListener("click", function handler(){
+    playTudum(); document.body.removeEventListener("click", handler);
+  }, {once:true});
+});
+</script>
 </body>
 </html>
