@@ -26,14 +26,9 @@
     .cert-title { color: #e50914; font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif; font-size: 1.24rem; letter-spacing: 0.01em; margin-bottom: 0.55rem; font-weight: 600; cursor: pointer; }
     .cert-desc { color: #e0e0e0; line-height: 1.5; font-size: 1.06rem; margin-bottom: 0.5rem;}
     .certifications-summary { margin: 2.2rem 0 1.4rem 0; font-size: 1.13rem; color: #e50914; text-align: center;}
-    .get-perm-btn { background: #e50914; color: #fff; border: none; padding: 0.85rem 1.5rem; border-radius: 8px; font-size: 1.15rem; font-weight: 600; margin: 2.3rem auto 0 auto; display: block; cursor: pointer; transition: background 0.22s; }
-    .get-perm-btn:hover { background: #fff; color: #e50914; }
-    .perm-popup { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,20,20,0.98); z-index:1001; align-items:center; justify-content:center;}
-    .perm-inner { background:#181818; border-radius:20px; padding:2rem 1.5rem; text-align:center; max-width:340px; box-shadow:0 8px 32px #e5091455; outline:2px solid #e50914;}
-    .pw-input { padding:8px 12px; border-radius:6px; border:1px solid #e50914; margin-bottom:12px; background:#141414; color:#fff;}
-    .close-btn {background:#e50914;color:#fff;border:none;font-size:1.03rem;padding:.5rem 1.5rem;border-radius:7px;cursor:pointer;margin-top:1.3rem;}
-    /* Certificate image popup */
-    .cert-img-popup {display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#181818; box-shadow:0 6px 28px #e50914bb; border-radius:14px; padding:2.2rem 1.4rem; z-index:9999;}
+    /* Certificate image modal */
+    .cert-img-popup { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,20,20,0.96); z-index:1001; align-items:center; justify-content:center;}
+    .cert-inner { background:#181818; border-radius:20px; padding:2.1rem 1.6rem; text-align:center; max-width:520px; box-shadow:0 8px 32px #e5091455; outline:2px solid #e50914;}
     .cert-img-popup img {max-width:96vw; max-height:68vh; border-radius:10px;}
     .cert-img-popup .close-btn {margin-top:1.1rem;}
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
@@ -52,29 +47,26 @@
 </nav>
 <header class="page-header">
   <h1 class="h-display">Certifications & Achievements</h1>
-  <p style="color:#ccc;">Access to certificates is protected. You need permission!</p>
+  <p style="color:#ccc;">Click any certification to view the actual certificate.</p>
 </header>
-
-<button class="get-perm-btn" onclick="document.getElementById('perm-popup').style.display='flex'">Get Permission</button>
-
-<section class="certifications-grid" id="cert-section" style="filter:blur(7px);pointer-events:none;user-select:none;">
+<section class="certifications-grid">
   <div class="cert-card">
-    <div class="cert-title" onclick="viewCert('cert-1.png')">IIT Madras</div>
+    <div class="cert-title" onclick="showCert('cert-1.png')">IIT Madras</div>
     <div class="cert-desc">Ethical AI; Conducting Cybersecurity Exercises & Drills</div>
   </div>
   <div class="cert-card">
-    <div class="cert-title" onclick="viewCert('cert-2.png')">IIT Roorkee</div>
+    <div class="cert-title" onclick="showCert('cert-2.png')">IIT Roorkee</div>
     <div class="cert-desc">Innovation, Business Models & Entrepreneurship</div>
   </div>
   <div class="cert-card">
-    <div class="cert-title" onclick="viewCert('cert-3.png')">IIT Kharagpur</div>
+    <div class="cert-title" onclick="showCert('cert-3.png')">IIT Kharagpur</div>
     <div class="cert-desc">Emotional Intelligence in Professional Environments</div>
   </div>
   <div class="cert-card">
-    <div class="cert-title" onclick="viewCert('cert-4.png')">IIT Kanpur</div>
+    <div class="cert-title" onclick="showCert('cert-4.png')">IIT Kanpur</div>
     <div class="cert-desc">Wildlife Ecology — bridging science and sustainability</div>
   </div>
-  <!-- Add more cert-card as needed -->
+  <!-- More cards as needed -->
 </section>
 <div class="certifications-summary">
   Certified to Create, Lead, Innovate
@@ -83,39 +75,17 @@
   © 2025 Seevaranjinee Sandhirasegarane | Certified to Create, Lead, Innovate
 </footer>
 
-<!-- Permission Modal -->
-<div class="perm-popup" id="perm-popup">
-  <div class="perm-inner">
-    <p>Enter access code to view and use certificates:</p>
-    <input type="password" class="pw-input" id="certcode">
-    <button class="get-perm-btn" style="width:auto;display:inline-block;margin:0;" onclick="unlockCerts()">Unlock</button>
-    <button class="close-btn" onclick="document.getElementById('perm-popup').style.display='none'">Cancel</button>
+<!-- Certificate Image Popup -->
+<div class="cert-img-popup" id="cert-img-popup">
+  <div class="cert-inner">
+    <img id="cert-img-view" src="" alt="Certificate"><br>
+    <button class="close-btn" onclick="document.getElementById('cert-img-popup').style.display='none'">Close</button>
   </div>
 </div>
-<!-- Certificate image popup -->
-<div id="cert-img-popup" class="cert-img-popup">
-  <img id="cert-img-view" src="" alt="Certificate">
-  <button class="close-btn" onclick="document.getElementById('cert-img-popup').style.display='none'">Close</button>
-</div>
 <script>
-function unlockCerts() {
-  const pw = document.getElementById('certcode').value;
-  if (pw === "2003") { // Replace with your chosen password!
-    document.getElementById('cert-section').style.filter = "none";
-    document.getElementById('cert-section').style.pointerEvents = "all";
-    document.getElementById('cert-section').style.userSelect = "auto";
-    document.getElementById('perm-popup').style.display = "none";
-  } else {
-    alert('Access denied. (Tip: Only you should know this code!)');
-  }
-}
-function viewCert(filename) {
-  if(document.getElementById('cert-section').style.filter !== "none") return;
+function showCert(filename) {
   document.getElementById('cert-img-view').src = filename;
-  document.getElementById('cert-img-popup').style.display = "block";
-}
-document.getElementById('perm-popup').onclick = function(event) {
-  if (event.target === this) this.style.display = 'none';
+  document.getElementById('cert-img-popup').style.display = 'flex';
 }
 </script>
 </body>
