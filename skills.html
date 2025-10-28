@@ -2,19 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Skills | Seevaranjinee</title>
+  <title>Skills | Seevaranjinee Sandhirasegarane</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    .skills-card {
-      background: #181818; border-radius: 18px; box-shadow: 0 2px 28px #000a, 0 0 16px 4px #e5091433;
-      padding: 2.4rem 2rem 1.7rem 2rem; max-width: 650px; margin: 2rem auto 0 auto;
+    body {
+      background: #141414;
+      color: #fff;
+      font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0; min-height: 100vh;
     }
-    .skills-title { color: #e50914; font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif; font-size: 1.7rem; margin-bottom: 1.15rem;}
-    .skills-list, .soft-list { list-style: none; padding: 0; margin-bottom: 1.3rem; }
-    .skills-list li, .soft-list li { margin: 0.4rem 0; color: #e0e0e0; font-size: 1.11rem; }
-    .skills-list li:before, .soft-list li:before { content: '• '; color: #e50914; font-size: 1.01em; }
+    nav {
+      background: #141414; position: sticky; top: 0; z-index: 99;
+      display: flex; justify-content: center; gap: 2.1rem;
+      font-weight: 500; font-size: 1.08rem; padding: 1.1rem 0;
+    }
+    nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
+    nav a:hover { color: #fff; }
+    .page-header {
+      padding: 2rem 0 1.2rem 0;
+      text-align: center;
+      background: #141414;
+    }
+    .h-display {
+      font-size: 2.3rem;
+      color: #e50914;
+      font-weight: bold;
+      letter-spacing: -1.5px;
+      margin-bottom: 0.6rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2.4rem auto 0 auto;
+      padding: 0 1.4rem;
+    }
+    .skills-card {
+      background: #181818;
+      border-radius: 18px;
+      box-shadow: 0 2px 28px #000a, 0 0 0 0 #e5091400;
+      padding: 2.2rem 2rem 1.7rem 2rem;
+      display: flex; flex-direction: column; align-items: flex-start;
+      transition: box-shadow 0.35s cubic-bezier(.24, .8, .24, 1), transform 0.4s cubic-bezier(.23, 1, .32, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .skills-card:nth-child(2){animation-delay:0.17s;}
+    .skills-card:nth-child(3){animation-delay:0.29s;}
+    .skills-card:hover {
+      box-shadow:
+        0 2px 28px #000a,
+        0 0 16px 4px #e50914cc,
+        0 0 30px 10px #e5091411;
+      transform: translateY(-10px) scale(1.03);
+    }
+    .skills-title {
+      color: #e50914;
+      font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.15rem;
+    }
+    .skills-list, .soft-list {
+      list-style: none; padding: 0; margin-bottom: 1.12rem;
+    }
+    .skills-list li, .soft-list li {
+      margin: 0.4rem 0; color: #e0e0e0; font-size: 1.09rem;
+    }
+    .skills-list li:before, .soft-list li:before { content: '• '; color: #e50914; font-size: 1.15em; }
+    .skills-summary {
+      margin: 2.2rem 0 1.4rem 0;
+      font-size: 1.13rem;
+      color: #e50914;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      color: #e50914;
+      background: #141414;
+      font-size: 1.09rem;
+      font-weight: 600;
+      padding: 2.2rem 0 2.2rem 0;
+      margin-top: 2.7rem;
+      letter-spacing: 1px;
+      border-top: 1px solid #222;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px){
+      .skills-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+      .skills-card { padding: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -29,24 +113,40 @@
 </nav>
 <header class="page-header">
   <h1 class="h-display">Skills</h1>
+  <p style="color:#ccc; text-align:center;">The tools, languages, and traits behind my journey—where tech meets creativity.</p>
 </header>
-<main>
+<section class="skills-grid">
   <div class="skills-card">
     <div class="skills-title">Technical Languages</div>
     <ul class="skills-list">
-      <li>Python, C, MATLAB, Verilog</li>
+      <li>Python</li>
+      <li>C</li>
+      <li>MATLAB</li>
+      <li>Verilog</li>
     </ul>
     <div class="skills-title" style="font-size:1.15rem;">Core Domains</div>
     <ul class="skills-list">
-      <li>Embedded Systems, IoT, VLSI Design, Control Systems, Signal Processing</li>
+      <li>Embedded Systems</li>
+      <li>Internet of Things (IoT)</li>
+      <li>VLSI Design</li>
+      <li>Control Systems</li>
+      <li>Signal Processing</li>
     </ul>
-    <div class="skills-title" style="font-size:1.15rem;">Tools & Protocols</div>
+  </div>
+  <div class="skills-card">
+    <div class="skills-title">Tools & Protocols</div>
     <ul class="skills-list">
-      <li>UART, SPI, I²C, CAN, MATLAB/Simulink, Cisco Networking Devices</li>
+      <li>UART, SPI, I²C, CAN</li>
+      <li>MATLAB/Simulink</li>
+      <li>Cisco Networking Devices</li>
+      <li>Oscilloscopes, Emulators, Digital Storage Instruments</li>
     </ul>
     <div class="skills-title" style="font-size:1.15rem;">Creative & Analytical Skills</div>
     <ul class="skills-list">
-      <li>Content Writing, Problem Analysis, Design Thinking, Leadership Strategy</li>
+      <li>Content Writing</li>
+      <li>Problem Analysis</li>
+      <li>Design Thinking</li>
+      <li>Leadership Strategy</li>
     </ul>
     <div class="skills-title" style="font-size:1.15rem;">Soft Skills</div>
     <ul class="soft-list">
@@ -55,13 +155,13 @@
       <li>Adaptability</li>
       <li>Empathetic Leadership</li>
     </ul>
-    <div style="margin-top:1.1rem; color:#ccc; font-style:italic;">
-      Technology is an instrument—its value lies in harmony with humanity.
-    </div>
   </div>
-</main>
-<footer class="footer">
-  © 2025 Seevaranjinee Sandhirasegarane | Skills for Today & Tomorrow
+</section>
+<div class="skills-summary">
+  Technology is an instrument—its value lies in harmony with humanity.
+</div>
+<footer>
+  © 2025 Seevaranjinee Sandhirasegarane | Skills for Tomorrow
 </footer>
 </body>
 </html>
