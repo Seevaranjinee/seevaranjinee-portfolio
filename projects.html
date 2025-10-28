@@ -1,9 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Projects | Seevaranjinee Sandhirasegarane</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Projects | Seevaranjinee Sandhirasegarane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #141414;
+      color: #fff;
+      font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0; min-height: 100vh;
+    }
+    nav {
+      background: #141414; position: sticky; top: 0; z-index: 99;
+      display: flex; justify-content: center; gap: 2.1rem;
+      font-weight: 500; font-size: 1.08rem; padding: 1.1rem 0;
+    }
+    nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
+    nav a:hover { color: #fff; }
+    .page-header {
+      padding: 2rem 0 1.2rem 0;
+      text-align: center;
+      background: #141414;
+    }
+    .h-display {
+      font-size: 2.3rem;
+      color: #e50914;
+      font-weight: bold;
+      letter-spacing: -1.5px;
+      margin-bottom: 0.6rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2.4rem auto 0 auto;
+      padding: 0 1.4rem;
+    }
+    .project-card {
+      background: #181818;
+      border-radius: 18px;
+      box-shadow: 0 2px 28px #000a, 0 0 0 0 #e5091400;
+      padding: 2.2rem 2rem 1.7rem 2rem;
+      display: flex; flex-direction: column; align-items: flex-start;
+      transition: box-shadow 0.35s cubic-bezier(.24, .8, .24, 1), transform 0.4s cubic-bezier(.23, 1, .32, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .project-card:nth-child(2){animation-delay:0.15s;}
+    .project-card:nth-child(3){animation-delay:0.28s;}
+    .project-card:nth-child(4){animation-delay:0.38s;}
+    .project-card:hover {
+      box-shadow:
+        0 2px 28px #000a,
+        0 0 16px 4px #e50914cc,
+        0 0 30px 10px #e5091411;
+      transform: translateY(-10px) scale(1.03);
+    }
+    .project-title {
+      color: #e50914;
+      font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.55rem;
+    }
+    .project-desc {
+      color: #e0e0e0;
+      line-height: 1.5;
+      font-size: 1.06rem;
+      margin-bottom: 0.5rem;
+    }
+    .projects-summary {
+      margin: 2.2rem 0 1.4rem 0;
+      font-size: 1.13rem;
+      color: #e50914;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      color: #e50914;
+      background: #141414;
+      font-size: 1.09rem;
+      font-weight: 600;
+      padding: 2.2rem 0 2.2rem 0;
+      margin-top: 2.7rem;
+      letter-spacing: 1px;
+      border-top: 1px solid #222;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px){
+      .projects-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+      .project-card { padding: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
 <nav>
@@ -15,38 +111,43 @@
   <a href="certifications.html">Certifications</a>
   <a href="blog.html">Blog</a>
 </nav>
-<main>
-  <h1>Projects</h1>
-  <p>
-    Each project, a short film—idea, action, lessons, credits. The best ones never truly end.
-  </p>
-  <section>
-    <h2>Image Filtering with Vedic Multipliers</h2>
-    <p>
+<header class="page-header">
+  <h1 class="h-display">Projects</h1>
+  <p style="color:#ccc;">Each project, a short film—idea, action, lessons, credits. The best ones never truly end.</p>
+</header>
+
+<section class="projects-grid">
+  <div class="project-card">
+    <div class="project-title">Image Filtering with Vedic Multipliers</div>
+    <div class="project-desc">
       Mathematics became art: designing algorithms for speed and clarity, painting with logic.
-    </p>
-  </section>
-  <section>
-    <h2>FPGA AES-GCM Encryption</h2>
-    <p>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-title">FPGA AES-GCM Encryption</div>
+    <div class="project-desc">
       Security in motion; fast, efficient, and ready for the future’s cyber twists.
-    </p>
-  </section>
-  <section>
-    <h2>AI Water Regulation System</h2>
-    <p>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-title">AI Water Regulation System</div>
+    <div class="project-desc">
       Coding for compassion, solutions that ripple outward—a hackathon where technology met empathy.
-    </p>
-  </section>
-  <section>
-    <h2>Smart City Infrastructure</h2>
-    <p>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-title">Smart City Infrastructure</div>
+    <div class="project-desc">
       Innovation, city-wide; my idea to make urban landscapes more human-centric and future-ready.
-    </p>
-  </section>
-</main>
+    </div>
+  </div>
+</section>
+
+<div class="projects-summary">
+  Projects are scenes—each one builds the plot and sets up new sequels.
+</div>
 <footer>
-  <p>Projects are scenes—each one builds the plot and sets up new sequels.</p>
+  © 2025 Seevaranjinee Sandhirasegarane | Portfolio Projects
 </footer>
 </body>
 </html>
