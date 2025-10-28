@@ -3,279 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <title>Seevaranjinee | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Tudum S animation CSS -->
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #141414;
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0; padding: 0;
+      min-height: 100vh;
+    }
+    nav {
+      background: #141414;
+      position: sticky; top: 0; z-index: 99;
+      display: flex; justify-content: center; align-items: center;
+      gap: 2.2rem; font-size: 1.12rem; font-weight: 500;
+      padding: 1.1rem 0; letter-spacing: 2px;
+      box-shadow: 0 2px 12px #000a;
+    }
+    nav a {
+      color: #e50914; text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #fff; }
+    .hero-banner {
+      background: linear-gradient(120deg,#141414 70%,#302f2f 100%);
+      display: flex; align-items: center; gap: 2.4rem;
+      margin: 0 auto; max-width: 1080px; margin-top: 2.7rem;
+      border-radius: 24px; box-shadow: 0 12px 48px #0007;
+      padding: 2.8rem 2.4rem;
+    }
+    .banner-img {
+      width: 165px; height: 165px; border-radius: 18px;
+      box-shadow: 0 10px 44px #e5091480;
+      object-fit: cover; margin: 0 2rem 0 0;
+      background: #e50914;
+    }
+    .banner-content {
+      flex: 1;
+    }
+    .banner-title {
+      font-size: 2.2rem; font-weight: 900; color: #e50914;
+      margin-bottom: .8rem; letter-spacing: -1.3px;
+      text-shadow: 0 2px 8px #000a;
+    }
+    .banner-desc {
+      font-size: 1.16rem; margin-bottom: 0.7rem;
+      color: #fff; line-height: 1.6;
+      font-weight: 500;
+    }
+    .banner-tagline {
+      font-size: 1.09rem; color: #e50914;
+      margin-bottom: 1.3rem; font-style: italic;
+      letter-spacing: .4px;
+    }
+    .section-row {
+      max-width: 1080px; margin: 2.8rem auto 0 auto;
+    }
+    .row-title {
+      font-size: 1.14rem; font-weight: 700; color: #e50914;
+      margin-bottom: 1.2rem; letter-spacing: -.7px;
+      text-shadow: 0 1px 4px #0006;
+    }
+    .card-row {
+      display: flex; overflow-x: auto; gap: 1.4rem; padding-bottom: 1rem;
+      scrollbar-width: thin; scrollbar-color: #e50914 #141414;
+    }
+    .card {
+      min-width: 210px; max-width: 234px; background: #181818;
+      border-radius: 16px; box-shadow: 0 2px 28px #1117;
+      padding: 1.1rem 1rem; color: #fff; transition: transform 0.22s, box-shadow 0.22s;
+      text-decoration: none; display: flex; flex-direction: column;
+      align-items: flex-start; margin-right: 0.2rem; position: relative;
+      border: 2px solid #232323;
+    }
+    .card::after {
+      content: '';
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+      border-radius: 16px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent 60%, #141414b5 100%);
+    }
+    .card:hover {
+      transform: scale(1.04) translateY(-8px);
+      box-shadow: 0 10px 32px #e509147c;
+      border-color: #e50914;
+      z-index: 2;
+    }
+    .card-title {
+      font-size: 1.08rem; font-weight: 600; color: #e50914;
+      margin-bottom: 0.5rem; text-shadow: 0 1px 2px #000;
+    }
+    .card-desc {
+      font-size: .99rem; color: #fff; opacity: .96; margin-bottom: .47rem;
+    }
+    .card-link {
+      margin-top: .5rem; color: #e50914;
+      text-decoration: none; font-weight: 600; font-size: .97rem;
+      display: inline-block;
+    }
+    .card-link:hover { color: #fff; }
+    footer {
+      text-align: center; color: #e50914bb;
+      margin: 3rem 0 1rem 0; font-size: 1.13rem; font-style: italic;
+    }
+    @media (max-width: 800px) {
+      .hero-banner { flex-direction: column; padding: 1.2rem; gap: 1rem; }
+      .banner-img { width: 125px; height: 125px; margin: 0 0 1.2rem 0; }
+    }
+  </style>
 </head>
 <body>
-<!-- Tudum S Intro Animation -->
-<div id="container">
-  <netflixintro letter="S">
-    <div class="helper-1">
-      <div class="effect-brush">
-        <span class="fur-31"></span>
-        <span class="fur-30"></span>
-        <span class="fur-29"></span>
-        <span class="fur-28"></span>
-        <span class="fur-27"></span>
-        <span class="fur-26"></span>
-        <span class="fur-25"></span>
-        <span class="fur-24"></span>
-        <span class="fur-23"></span>
-        <span class="fur-22"></span>
-        <span class="fur-21"></span>
-        <span class="fur-20"></span>
-        <span class="fur-19"></span>
-        <span class="fur-18"></span>
-        <span class="fur-17"></span>
-        <span class="fur-16"></span>
-        <span class="fur-15"></span>
-        <span class="fur-14"></span>
-        <span class="fur-13"></span>
-        <span class="fur-12"></span>
-        <span class="fur-11"></span>
-        <span class="fur-10"></span>
-        <span class="fur-9"></span>
-        <span class="fur-8"></span>
-        <span class="fur-7"></span>
-        <span class="fur-6"></span>
-        <span class="fur-5"></span>
-        <span class="fur-4"></span>
-        <span class="fur-3"></span>
-        <span class="fur-2"></span>
-        <span class="fur-1"></span>
-      </div>
-      <div class="effect-lumieres">
-        <span class="lamp-1"></span>
-        <span class="lamp-2"></span>
-        <span class="lamp-3"></span>
-        <span class="lamp-4"></span>
-        <span class="lamp-5"></span>
-        <span class="lamp-6"></span>
-        <span class="lamp-7"></span>
-        <span class="lamp-8"></span>
-        <span class="lamp-9"></span>
-        <span class="lamp-10"></span>
-        <span class="lamp-11"></span>
-        <span class="lamp-12"></span>
-        <span class="lamp-13"></span>
-        <span class="lamp-14"></span>
-        <span class="lamp-15"></span>
-        <span class="lamp-16"></span>
-        <span class="lamp-17"></span>
-        <span class="lamp-18"></span>
-        <span class="lamp-19"></span>
-        <span class="lamp-20"></span>
-        <span class="lamp-21"></span>
-        <span class="lamp-22"></span>
-        <span class="lamp-23"></span>
-        <span class="lamp-24"></span>
-        <span class="lamp-25"></span>
-        <span class="lamp-26"></span>
-        <span class="lamp-27"></span>
-        <span class="lamp-28"></span>
-      </div>
-    </div>
-    <div class="helper-2">
-      <div class="effect-brush">
-        <span class="fur-31"></span>
-        <span class="fur-30"></span>
-        <span class="fur-29"></span>
-        <span class="fur-28"></span>
-        <span class="fur-27"></span>
-        <span class="fur-26"></span>
-        <span class="fur-25"></span>
-        <span class="fur-24"></span>
-        <span class="fur-23"></span>
-        <span class="fur-22"></span>
-        <span class="fur-21"></span>
-        <span class="fur-20"></span>
-        <span class="fur-19"></span>
-        <span class="fur-18"></span>
-        <span class="fur-17"></span>
-        <span class="fur-16"></span>
-        <span class="fur-15"></span>
-        <span class="fur-14"></span>
-        <span class="fur-13"></span>
-        <span class="fur-12"></span>
-        <span class="fur-11"></span>
-        <span class="fur-10"></span>
-        <span class="fur-9"></span>
-        <span class="fur-8"></span>
-        <span class="fur-7"></span>
-        <span class="fur-6"></span>
-        <span class="fur-5"></span>
-        <span class="fur-4"></span>
-        <span class="fur-3"></span>
-        <span class="fur-2"></span>
-        <span class="fur-1"></span>
-      </div>
-    </div>
-    <div class="helper-3">
-      <div class="effect-brush">
-        <span class="fur-31"></span>
-        <span class="fur-30"></span>
-        <span class="fur-29"></span>
-        <span class="fur-28"></span>
-        <span class="fur-27"></span>
-        <span class="fur-26"></span>
-        <span class="fur-25"></span>
-        <span class="fur-24"></span>
-        <span class="fur-23"></span>
-        <span class="fur-22"></span>
-        <span class="fur-21"></span>
-        <span class="fur-20"></span>
-        <span class="fur-19"></span>
-        <span class="fur-18"></span>
-        <span class="fur-17"></span>
-        <span class="fur-16"></span>
-        <span class="fur-15"></span>
-        <span class="fur-14"></span>
-        <span class="fur-13"></span>
-        <span class="fur-12"></span>
-        <span class="fur-11"></span>
-        <span class="fur-10"></span>
-        <span class="fur-9"></span>
-        <span class="fur-8"></span>
-        <span class="fur-7"></span>
-        <span class="fur-6"></span>
-        <span class="fur-5"></span>
-        <span class="fur-4"></span>
-        <span class="fur-3"></span>
-        <span class="fur-2"></span>
-        <span class="fur-1"></span>
-      </div>
-    </div>
-    <div class="helper-4">
-      <div class="effect-brush">
-        <span class="fur-31"></span>
-        <span class="fur-30"></span>
-        <span class="fur-29"></span>
-        <span class="fur-28"></span>
-        <span class="fur-27"></span>
-        <span class="fur-26"></span>
-        <span class="fur-25"></span>
-        <span class="fur-24"></span>
-        <span class="fur-23"></span>
-        <span class="fur-22"></span>
-        <span class="fur-21"></span>
-        <span class="fur-20"></span>
-        <span class="fur-19"></span>
-        <span class="fur-18"></span>
-        <span class="fur-17"></span>
-        <span class="fur-16"></span>
-        <span class="fur-15"></span>
-        <span class="fur-14"></span>
-        <span class="fur-13"></span>
-        <span class="fur-12"></span>
-        <span class="fur-11"></span>
-        <span class="fur-10"></span>
-        <span class="fur-9"></span>
-        <span class="fur-8"></span>
-        <span class="fur-7"></span>
-        <span class="fur-6"></span>
-        <span class="fur-5"></span>
-        <span class="fur-4"></span>
-        <span class="fur-3"></span>
-        <span class="fur-2"></span>
-        <span class="fur-1"></span>
-      </div>
-    </div>
-  </netflixintro>
-</div>
-<!-- Main Portfolio Site (hidden until Tudum is finished ) -->
-<div id="main-content" style="display:none;">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="education.html">Education</a>
-    <a href="projects.html">Projects</a>
-    <a href="skills.html">Skills</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="education.html">Education</a>
+  <a href="projects.html">Projects</a>
+  <a href="skills.html">Skills</a>
+  <a href="certifications.html">Certifications</a>
+  <a href="blog.html">Blog</a>
+</nav>
 
-  <section class="hero-banner">
-    <img src="generated-image.png" alt="Portfolio Banner" class="banner-img"/>
-    <div class="banner-content">
-      <div class="banner-title">Be the change you wish to see in the world.</div>
-      <div class="banner-desc">
-        I’m Seevaranjinee — engineer, creator, cinephile, and an innovator in the making. I live at the crossroads of technology and storytelling, where imagination becomes design and purpose meets progress.<br>
-        I believe in the art of the unfinished — ideas that adapt and transform the world.
-      </div>
-      <div class="banner-tagline">
-        Join me to build a future that’s sustainable, tech-driven, and endlessly curious—one inspired idea at a time.
-      </div>
+<section class="hero-banner">
+  <img src="generated-image.png" alt="Portfolio Banner" class="banner-img"/>
+  <div class="banner-content">
+    <div class="banner-title">Be the change you wish to see in the world.</div>
+    <div class="banner-desc">
+      I’m Seevaranjinee — engineer, creator, cinephile, and an innovator in the making. I live at the crossroads of technology and storytelling, where imagination becomes design and purpose meets progress.<br>
+      I believe in the art of the unfinished — ideas that adapt and transform the world.
     </div>
-  </section>
-  <!-- ...rest of your section-row and footer, as above... -->
-  <section class="section-row">
-    <div class="row-title">Work Experience</div>
-    <div class="card-row">
-      <a href="work.html" class="card">
-        <div class="card-title">Embedded Systems & IoT Intern</div>
-        <div class="card-desc">Industry automation, real-time data, hardware design.</div>
-        <span class="card-link">More</span>
-      </a>
-      <a href="work.html" class="card">
-        <div class="card-title">Networking Intern</div>
-        <div class="card-desc">Cisco IoT, protocol troubleshooting, tech solutions.</div>
-        <span class="card-link">More</span>
-      </a>
-      <a href="work.html" class="card">
-        <div class="card-title">In-Plant Trainee</div>
-        <div class="card-desc">Defense electronics, quality assurance, workflow.</div>
-        <span class="card-link">More</span>
-      </a>
+    <div class="banner-tagline">
+      Join me to build a future that’s sustainable, tech-driven, and endlessly curious—one inspired idea at a time.
     </div>
-  </section>
-  <section class="section-row">
-    <div class="row-title">Projects</div>
-    <div class="card-row">
-      <a href="projects.html" class="card">
-        <div class="card-title">Image Filtering with Vedic Multipliers</div>
-        <div class="card-desc">Math meets art—speed and clarity algorithm design.</div>
-        <span class="card-link">View</span>
-      </a>
-      <a href="projects.html" class="card">
-        <div class="card-title">FPGA AES-GCM Encryption</div>
-        <div class="card-desc">Security in motion: high-speed FPGA encryption.</div>
-        <span class="card-link">View</span>
-      </a>
-      <a href="projects.html" class="card">
-        <div class="card-title">AI Water Regulation System</div>
-        <div class="card-desc">Tech for empathy: Hackathon innovations ripple out.</div>
-        <span class="card-link">View</span>
-      </a>
-    </div>
-  </section>
-  <section class="section-row">
-    <div class="row-title">Education</div>
-    <div class="card-row">
-      <a href="education.html" class="card">
-        <div class="card-title">B.Tech, Electronics & Comm.</div>
-        <div class="card-desc">Smart encryption, innovation, hackathons, research.</div>
-        <span class="card-link">Details</span>
-      </a>
-      <a href="education.html" class="card">
-        <div class="card-title">Primrose School</div>
-        <div class="card-desc">Mathematics Olympiad, profound curiosity.</div>
-        <span class="card-link">Details</span>
-      </a>
-    </div>
-  </section>
-  <footer>
-    This portfolio is a draft—ever evolving, always reaching for the next page or scene.
-  </footer>
-</div>
-<script src="script.js"></script>
-<script>
-  // Once the Tudum S animation is finished, transition to main site
-  setTimeout(function(){
-    document.getElementById('container').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-  }, 4000); // Adjust to match your intro duration (ms)
-</script>
+  </div>
+</section>
+
+<section class="section-row">
+  <div class="row-title">Work Experience</div>
+  <div class="card-row">
+    <a href="work.html" class="card">
+      <div class="card-title">Embedded Systems & IoT Intern</div>
+      <div class="card-desc">Industry automation, real-time data, hardware design.</div>
+      <span class="card-link">More</span>
+    </a>
+    <a href="work.html" class="card">
+      <div class="card-title">Networking Intern</div>
+      <div class="card-desc">Cisco IoT, protocol troubleshooting, tech solutions.</div>
+      <span class="card-link">More</span>
+    </a>
+    <a href="work.html" class="card">
+      <div class="card-title">In-Plant Trainee</div>
+      <div class="card-desc">Defense electronics, quality assurance, workflow.</div>
+      <span class="card-link">More</span>
+    </a>
+  </div>
+</section>
+
+<section class="section-row">
+  <div class="row-title">Projects</div>
+  <div class="card-row">
+    <a href="projects.html" class="card">
+      <div class="card-title">Image Filtering with Vedic Multipliers</div>
+      <div class="card-desc">Math meets art—speed and clarity algorithm design.</div>
+      <span class="card-link">View</span>
+    </a>
+    <a href="projects.html" class="card">
+      <div class="card-title">FPGA AES-GCM Encryption</div>
+      <div class="card-desc">Security in motion: high-speed FPGA encryption.</div>
+      <span class="card-link">View</span>
+    </a>
+    <a href="projects.html" class="card">
+      <div class="card-title">AI Water Regulation System</div>
+      <div class="card-desc">Tech for empathy: Hackathon innovations ripple out.</div>
+      <span class="card-link">View</span>
+    </a>
+  </div>
+</section>
+
+<section class="section-row">
+  <div class="row-title">Education</div>
+  <div class="card-row">
+    <a href="education.html" class="card">
+      <div class="card-title">B.Tech, Electronics & Comm.</div>
+      <div class="card-desc">Smart encryption, innovation, hackathons, research.</div>
+      <span class="card-link">Details</span>
+    </a>
+    <a href="education.html" class="card">
+      <div class="card-title">Primrose School</div>
+      <div class="card-desc">Mathematics Olympiad, profound curiosity.</div>
+      <span class="card-link">Details</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  This portfolio is a draft—ever evolving, always reaching for the next page or scene.
+</footer>
 </body>
 </html>
