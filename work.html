@@ -5,9 +5,9 @@
   <title>Work Experience | Seevaranjinee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* Add only corrections, grid already loaded from style.css */
     nav {
       background: #141414; position: sticky; top: 0; z-index: 99;
       display: flex; justify-content: center; align-items: center; gap: 2.1rem;
@@ -15,20 +15,28 @@
     }
     nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
     nav a:hover { color: #fff; }
+    .page-header { padding: 2rem 0 1.2rem 0; text-align: center; background: #141414;}
+    .h-display { font-size: 2.3rem; color: #e50914; font-weight: bold; letter-spacing: -1.5px; margin-bottom: 0.6rem; font-family: 'Montserrat', Arial, sans-serif;}
+    .work-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1100px; margin: 2.4rem auto 0 auto; padding: 0 1.4rem;}
+    .work-card { background: #181818; border-radius: 18px; box-shadow: 0 2px 28px #000a, 0 0 0 0 #e5091400; padding: 2.2rem 2rem 1.7rem 2rem; display: flex; flex-direction: column; align-items: flex-start; transition: box-shadow 0.35s cubic-bezier(.24, .8, .24, 1), transform 0.4s cubic-bezier(.23, 1, .32, 1); opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease forwards;}
+    .work-card:nth-child(2){animation-delay:0.15s;}
+    .work-card:nth-child(3){animation-delay:0.28s;}
+    .work-card:hover { box-shadow: 0 2px 28px #000a, 0 0 16px 4px #e50914cc, 0 0 30px 10px #e5091411; transform: translateY(-10px) scale(1.03);}
+    h2 { color: #e50914; font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif; font-size: 1.7rem; margin-bottom: .5rem;}
+    h3 { color: #ccc; font-size: 1.04rem; margin:0 0 .6rem 0; }
+    .cert-btn { background:#e50914; color:#fff; padding:.6rem 1.4rem; border:none; border-radius:8px; font-size:1.08rem; font-weight:600; letter-spacing:1px; cursor:pointer; margin:2.2rem auto 0 auto; display:block; transition:background 0.2s; box-shadow:0 2px 10px #e5091435;}
+    .cert-btn:hover { background:#fff; color:#e50914; border:2px solid #e50914;}
     /* Certificate modal */
     .cert-popup {display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,20,20,0.98); z-index:1001; align-items:center; justify-content:center;}
     .cert-inner {background:#181818;border-radius:20px;padding:2rem 1.5rem;text-align:center;max-width:420px;box-shadow:0 8px 32px #e5091455;outline:2px solid #e50914;}
     .cert-list {list-style:none; padding:0; margin:2rem 0 1rem 0;}
     .cert-list li{ margin:1rem 0; }
-    .cert-btn {
-      background:#e50914; color:#fff; padding:.6rem 1.4rem; border:none; border-radius:8px; font-size:1.08rem;
-      font-weight:600; letter-spacing:1px; cursor:pointer; margin-top:2.2rem; transition:background 0.2s;
-      box-shadow:0 2px 10px #e5091435;
-    }
-    .cert-btn:hover { background:#fff; color:#e50914; border:2px solid #e50914;}
-    .pw-input { padding:8px 12px; border-radius:6px; border:1px solid #e50914; margin-bottom:12px; background:#141414; color:#fff;}
+    .cert-list a {color: #e50914; text-decoration:underline; cursor:pointer; font-size:1.08rem;}
+    .cert-list a:hover {color:#fff;}
     .show-img { margin-top:1.2rem; padding:1.4rem 0 }
     .close-btn {background:#e50914;color:#fff;border:none;font-size:1.03rem;padding:.5rem 1.5rem;border-radius:7px;cursor:pointer;margin-top:1.3rem;}
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    @media (max-width: 700px){ .work-grid { grid-template-columns: 1fr; gap: 1.3rem; } .work-card { padding: 1.2rem; } }
   </style>
 </head>
 <body>
@@ -41,14 +49,12 @@
   <a href="certifications.html">Certifications</a>
   <a href="blog.html">Blog</a>
 </nav>
-
 <header class="page-header">
   <h1 class="h-display">Work Experience</h1>
   <p>Every workday is a narrative — technical scripts and human stories. These are the episodes that shaped my journey.</p>
 </header>
 
 <section class="work-grid">
-
   <div class="work-card">
     <div class="card-content">
       <h2>Embedded Systems & IoT Intern</h2>
@@ -79,41 +85,23 @@
   </div>
 </section>
 
-<!-- Secure Certificates Feature -->
 <button class="cert-btn" onclick="document.getElementById('cert-popup').style.display='flex'">View Experience Certificates</button>
 <div class="cert-popup" id="cert-popup">
   <div class="cert-inner">
-    <div id="cert-login">
-      <p>Enter access code:</p>
-      <input type="password" class="pw-input" id="certcode">
-      <button class="cert-btn" onclick="checkCert()">Unlock Certificates</button>
-      <button class="close-btn" onclick="document.getElementById('cert-popup').style.display='none'">Cancel</button>
-    </div>
-    <div id="cert-contents" style="display:none;">
-      <h2 style="color:#e50914;">Experience Certificates</h2>
-      <ul class="cert-list">
-        <li><a href="#" onclick="showCert('cert-1.png');return false;">Embedded Systems Specialization (MSME)</a></li>
-        <li><a href="#" onclick="showCert('cert-2.png');return false;">BEL Defense QA Training</a></li>
-        <li><a href="#" onclick="showCert('cert-3.png');return false;">Cisco Networking Workshop</a></li>
-      </ul>
-      <div id="cert-img" class="show-img"></div>
-      <button class="close-btn" onclick="document.getElementById('cert-popup').style.display='none'">Close</button>
-    </div>
+    <h2 style="color:#e50914;">Experience Certificates</h2>
+    <ul class="cert-list">
+      <li><a onclick="showCert('cert-1.png');return false;">Embedded Systems Specialization (MSME)</a></li>
+      <li><a onclick="showCert('cert-2.png');return false;">BEL Defense QA Training</a></li>
+      <li><a onclick="showCert('cert-3.png');return false;">Cisco Networking Workshop</a></li>
+    </ul>
+    <div id="cert-img" class="show-img"></div>
+    <button class="close-btn" onclick="document.getElementById('cert-popup').style.display='none'">Close</button>
   </div>
 </div>
 <footer class="footer">
   © 2025 Seevaranjinee Sandhirasegarane | Crafted in Code & Story
 </footer>
 <script>
-function checkCert() {
-  const pw = document.getElementById('certcode').value;
-  if (pw === "2003") { // Replace with your actual code
-    document.getElementById('cert-login').style.display = "none";
-    document.getElementById('cert-contents').style.display = "block";
-  } else {
-    alert('Access denied. (Tip: Only you should know this code!)');
-  }
-}
 function showCert(filename) {
   document.getElementById('cert-img').innerHTML =
     "<img src='" + filename + "' alt='Certificate' style='max-width:96%;max-height:340px;border-radius:14px;box-shadow:0 2px 32px #e5091445;outline:2px solid #e50914;margin-top:2rem;'>";
