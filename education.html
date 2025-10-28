@@ -2,66 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Education | Seevaranjinee</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    body { background: #141414; color: #fff; font-family: 'Montserrat', Arial, sans-serif; margin: 0; padding: 0; min-height: 100vh;}
-    nav { background: #141414; position: sticky; top: 0; z-index: 99; display: flex; justify-content: center; gap: 2.1rem; font-weight: 500; font-size: 1.08rem; padding: 1.1rem 0; }
-    nav a { color: #e50914; text-decoration: none; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; transition: color 0.2s;}
-    nav a:hover { color: #fff; }
-    .container { max-width: 800px; margin: 2.8rem auto 0 auto; }
-    .section-h1 { color: #e50914; font-size: 2.1rem; text-shadow: 0 2px 8px #000a; font-weight: 800; letter-spacing: -1.6px; margin-bottom: 2.1rem;}
-    .edu-card { background: #181818; border-radius: 16px; margin-bottom: 2rem; box-shadow: 0 2px 28px #0007; padding: 2rem 1.5rem 1rem 1.5rem; position: relative;}
-    .edu-title { font-size: 1.17rem; color: #e50914; font-weight: 700; margin-bottom: 0.4rem;}
-    .edu-meta { font-size: 1.04rem; color: #fff; opacity: 0.83; margin-bottom: 1rem;}
-    .edu-desc { font-size: 1.09rem; color: #fff; margin-bottom: .8rem; line-height: 1.7;}
-    .quote { font-style: italic; color: #fff; opacity: 0.7; padding-left: 1rem; border-left: 4px solid #e50914; margin-bottom: .8rem;}
-    .edu-summary { font-size: 1.16rem; color: #e50914; margin: 2.4rem 0 1.2rem 0;}
-    @media (max-width: 650px) { .container, .edu-card { padding: 1rem; } }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Seevaranjinee</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="work.html">Work</a>
-  <a href="education.html">Education</a>
-  <a href="projects.html">Projects</a>
-  <a href="skills.html">Skills</a>
-  <a href="certifications.html">Certifications</a>
-  <a href="blog.html">Blog</a>
-</nav>
-<div class="container">
-  <div class="section-h1">🎓 Education</div>
-  
-  <div class="edu-card">
-    <div class="edu-title">Puducherry Technological University</div>
-    <div class="edu-meta">Bachelor of Technology – Electronics and Communication Engineering<br>(Dec 2021 – May 2025)</div>
-    <div class="edu-desc">
-      My academic journey at PTU is where curiosity met creation. Between circuits, algorithms, and late-night ideas, I discovered how innovation isn’t just learned — it’s lived.<br>
-      From smart encryption research to IoT-based sustainable systems, my work bridges logic and purpose.<br>
-      My thesis, <strong>FPGA Implementation of AES-GCM Encryption Using Pipelining and Karatsuba Multiplication</strong>, explores high-speed, energy-efficient cryptographic design, blending security with system intelligence.<br>
-      Beyond the classroom, I was driven by collaboration and challenge — from winning national hackathons to leading smart city innovation projects, learning that the future is built by those who dare to imagine it first.
+
+<header class="page-header">
+  <h1 class="h-display">Projects</h1>
+  <p>Each project, a short film — idea, action, lessons, credits. The best ones never truly end.</p>
+</header>
+
+<section class="projects-grid">
+
+  <div class="project-card">
+    <div class="card-content">
+      <h2>Image Filtering with Vedic Multipliers</h2>
+      <p>Where mathematics became art. I designed an FPGA-based image filtering system using Vedic mathematics, accelerating computations with elegant simplicity. Innovation lay in reimagining tradition — turning age-old math into modern engineering.</p>
     </div>
-    <div class="quote">“In every code and calculation, I found a way to humanize technology.”</div>
   </div>
 
-  <div class="edu-card">
-    <div class="edu-title">Primrose School, Puducherry</div>
-    <div class="edu-meta">High School (Graduated 2021)</div>
-    <div class="edu-desc">
-      Where my fascination for problem-solving began — each subject a story, each equation a spark.<br>
-      A Top 100 finalist in the Unified International Mathematics Olympiad, I learned to see logic as art and curiosity as a lifelong companion.<br>
-      Those formative years taught me the value of consistency, wonder, and creation — lessons that continue to guide every innovation I pursue.
+  <div class="project-card">
+    <div class="card-content">
+      <h2>FPGA AES-GCM Encryption Accelerator</h2>
+      <p>A story of speed meeting security. Implemented AES-GCM with pipelining and Karatsuba multiplication, creating a high-speed cryptographic core for embedded systems — blending data protection with performance.</p>
     </div>
-    <div class="quote">Education, to me, is not a finished chapter — it’s a script always rehearsing for something greater.</div>
   </div>
 
-  <div class="edu-summary">
-    Curiosity is the catalyst; education is the engine of my next big leap.
+  <div class="project-card">
+    <div class="card-content">
+      <h2>AI-Based Water Regulation System</h2>
+      <p>A hackathon project where technology met empathy. Built an IoT-enabled irrigation system using AI-based control, optimizing water usage for sustainable agriculture. When tech learns to listen, nature responds.</p>
+    </div>
   </div>
-</div>
-<footer>
-  <br>This portfolio is a script in progress—each lesson, a scene directing the future.
+
+  <div class="project-card">
+    <div class="card-content">
+      <h2>Smart City Infrastructure Management</h2>
+      <p>Innovation at a city scale — proposed an IoT-driven infrastructure management framework integrating sensors, analytics, and smart governance. Systems that don’t just automate, but understand and adapt.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  © 2025 Seevaranjinee Sandhirasegarane | Stories in code and creation
 </footer>
+
 </body>
 </html>
